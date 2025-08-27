@@ -1,0 +1,11 @@
+.avatar {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.avatar li {
+    color: #888888;
+}

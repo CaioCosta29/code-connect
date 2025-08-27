@@ -1,0 +1,53 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.imgContainer {
+    position: relative;
+    height: 156px;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    background-color: #888888;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+
+.textContainer {
+    color: #BCBCBC;
+    margin: 16px 0;
+}
+
+.infoContainer {
+    background-color: #171D1F;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.avatarContainer {
+    text-align: end;
+    margin-top: auto;
+}
+
+.link {
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.imagem {
+    object-fit: cover;
+}
+
+.imgInner {
+    position: absolute;
+  inset: 12px;
+  border-radius: 12px;
+  overflow: hidden; 
+}
