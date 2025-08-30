@@ -9,3 +9,8 @@
 .avatar li {
     color: #888888;
 }
+
+.icon {
+  border-radius: 50%;
+  object-fit: cover; 
+}

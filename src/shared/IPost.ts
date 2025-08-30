@@ -11,5 +11,7 @@ export type IPost = {
     title: string,
     body: string
     slug: string
+    createdAt: Date
+    updatedAt: Date
     author: IAtor
 }
