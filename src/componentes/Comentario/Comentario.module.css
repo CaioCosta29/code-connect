@@ -1,0 +1,9 @@
+.comentario {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.comentario p {
+    color: #171D1F;
+}

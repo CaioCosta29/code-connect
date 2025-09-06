@@ -4,6 +4,8 @@ import styles from './page.module.css'
 import Link from "next/link";
 import logger from "@/logger";
 import db from "../../prisma/db";
+import FormPesquisa from "@/componentes/FormPesquisa";
+import { postSelect } from "@/shared/IPost";
 
 type HomeProps = {
   searchParams: { pagina?: number, q?: string }
@@ -37,10 +39,8 @@ async function coletarPosts(page: number, pesquisa: string) {
       take: perPage,
       skip,
       where,
-      orderBy: { createdAt: "desc" },
-      include: {
-        author: true
-      }
+      orderBy: { id: "desc" },
+      ...postSelect, 
     })
 
     return { posts, prev, next }
@@ -60,6 +60,7 @@ export default async function Home({ searchParams }: HomeProps) {
 
   return (
     <main className={styles.main}>
+      <FormPesquisa/>
       <div className={styles.posts}>
         {posts.map((post) => {
           return <CardPost key={post.id} post={post} />

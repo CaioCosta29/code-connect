@@ -65,3 +65,8 @@
 {"error":{"clientVersion":"6.14.0","name":"PrismaClientInitializationError"},"level":"error","message":"erro ao pegar os psots"}
 {"error":{"clientVersion":"6.14.0","name":"PrismaClientInitializationError"},"level":"error","message":"erro ao pegar os psots"}
 {"error":{"clientVersion":"6.15.0","name":"PrismaClientValidationError"},"level":"error","message":"erro ao pegar os psots"}
+{"error":{"clientVersion":"6.15.0","name":"PrismaClientValidationError"},"level":"error","message":"erro ao pegar os psots"}
+{"error":{},"level":"error","message":"erro ao pegar os psots"}
+{"error":{"clientVersion":"6.15.0","name":"PrismaClientValidationError"},"level":"error","message":"erro ao pegar os psots"}
+{"error":{},"level":"error","message":"erro ao pegar os psots"}
+{"error":{"clientVersion":"6.15.0","name":"PrismaClientValidationError"},"level":"error","message":"erro ao pegar o post"}

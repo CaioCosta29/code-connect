@@ -18,7 +18,9 @@ model User {
   name      String
   username     String   @unique
   avatar String
+
   Post Post[]
+  comentarios Comentario[]
 }
 
 model Post {
@@ -33,4 +35,25 @@ model Post {
 
   authorId Int
   author User @relation(fields: [authorId], references: [id])
+
+  comentarios Comentario[]
+
+  likes Int @default(0)
+}
+
+model Comentario {
+  id Int @id @default(autoincrement())
+  texto String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  authorId Int
+  author User @relation(fields: [authorId], references: [id])
+
+  postId Int
+  post Post @relation(fields: [postId], references: [id])
+
+  parentId Int?
+  parent Comentario? @relation("CommentReplies", fields: [parentId], references: [id])
+  replies Comentario[] @relation("CommentReplies")
 }

@@ -1,8 +1,9 @@
 import CardPost from "@/componentes/CardPost";
 import logger from "@/logger";
 import db from "../../../../prisma/db";
-import { IPost } from "@/shared/IPost";
+import { IPost, postSelect } from "@/shared/IPost";
 import { notFound } from "next/navigation";
+import ComentarioLista from "@/componentes/ComentarioLista";
 
 type PagePostProps = {
     params: { slug: string }
@@ -12,18 +13,8 @@ async function coletarUmPost(slug: string): Promise<IPost | null> {
     try {
         const post = await db.post.findUnique({
             where: { slug },
-            select: {
-                id: true,
-                cover: true,
-                title: true,
-                body: true,
-                slug: true,
-                createdAt: true,
-                updatedAt: true,
-                author: {
-                    select: { id: true, name: true, username: true, avatar: true },
-                },
-            },
+            ...postSelect, 
+
         });
 
         return post
@@ -40,9 +31,17 @@ const PagePost = async ({ params }: PagePostProps) => {
         notFound();
     }
 
+    
+    
+
     return (
         <div>
             <CardPost post={post} highlight />
+
+            <div style={{marginTop: "2em"}}>
+                
+                <ComentarioLista comentarios={post.comentarios} />
+            </div>
         </div>
     )
 }

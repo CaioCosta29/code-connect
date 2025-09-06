@@ -30,9 +30,15 @@
     flex: 1;
 }
 
-.avatarContainer {
-    text-align: end;
-    margin-top: auto;
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerContainer p {
+    color: #888;
+    font-size: 15px;
+    text-align: center;
 }
 
 .link {
@@ -50,4 +56,10 @@
   inset: 12px;
   border-radius: 12px;
   overflow: hidden; 
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }

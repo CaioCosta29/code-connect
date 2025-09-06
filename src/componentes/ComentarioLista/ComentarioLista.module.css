@@ -1,0 +1,15 @@
+.comentarios {
+    background-color: #888888;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1.5em;
+    
+}
+
+.listaComentarios {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}

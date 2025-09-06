@@ -5,5 +5,12 @@
     border-radius: 8px;
     border: none;
     font-weight: 600;
+    cursor: pointer;
+}
+
+.icon {
+    border: none;
+    background-color: transparent;
+    cursor: pointer ;
 }
 

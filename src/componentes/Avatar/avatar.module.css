@@ -6,8 +6,12 @@
     gap: 6px;
 }
 
-.avatar li {
-    color: #888888;
+.textoCinza {
+  color: #888888;
+}
+
+.textoPreto {
+  color: #171D1F;
 }
 
 .icon {
